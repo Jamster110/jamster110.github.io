@@ -13,9 +13,14 @@ body {
         padding: 10px;
     }
 }
-
-
-
+.container {
+    width: 100%; /* Full width for smaller screens */
+}
+@media (max-width: 768px) {
+    .menu {
+        display: none;
+    }
+}
 .sidebar {
     position: fixed;
     top: 0;
