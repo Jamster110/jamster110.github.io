@@ -447,18 +447,6 @@ body {
     transform: translateX(-100%);
 }
 
-/* Sidebar toggle button */
-#sidebarToggle {
-    position: absolute;
-    top: 10px;
-    right: -40px;
-    background-color: #333;
-    color: white;
-    border: none;
-    padding: 10px;
-    cursor: pointer;
-}
-
 /* Media query for smaller screens */
 @media (max-width: 768px) {
     .sidebar {
