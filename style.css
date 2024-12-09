@@ -1,10 +1,10 @@
 body {
-    font-family: Arial, sans-serif;
-    background-color: grey;
-    margin: 0;
-    padding: 0;
-    display: flex;
+    background-image: url('Images/WEBSITE%20BACKGROUND.avif');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
 }
+
 
 .sidebar {
     position: fixed;
