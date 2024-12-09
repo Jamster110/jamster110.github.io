@@ -463,3 +463,49 @@ header h1 {
 
 .bbutton:hover {
     background-color: #00f619;
+/* Sidebar */
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: -260px; /* Initially off-screen */
+    width: 250px;
+    height: 100vh;
+    background-color: #333;
+    color: white;
+    overflow-y: auto;
+    transition: left 0.3s ease; /* Smooth slide effect */
+    z-index: 1000;
+}
+
+/* Sidebar Visible */
+.sidebar.open {
+    left: 0;
+}
+
+/* Sidebar Toggle Button */
+.sidebar-toggle {
+    position: absolute;
+    top: 10px;
+    right: -50px; /* Position it outside the sidebar */
+    background-color: #333;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.sidebar-toggle:hover {
+    background-color: #575757;
+}
+
+/* Main Content */
+.main-content {
+    margin-left: 20px;
+    transition: margin-left 0.3s;
+}
+
+.main-content.shift {
+    margin-left: 270px; /* Adjust when sidebar is open */
+}
