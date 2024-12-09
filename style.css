@@ -5,22 +5,6 @@ body {
     padding: 0;
     display: flex;
 }
-@media (max-width: 768px) {
-    .sidebar {
-        display: none; /* Hide the sidebar on small screens */
-    }
-    .main-content {
-        padding: 10px;
-    }
-}
-.container {
-    width: 100%; /* Full width for smaller screens */
-}
-@media (max-width: 768px) {
-    .menu {
-        display: none;
-    }
-}
 .sidebar {
     position: fixed;
     top: 0;
@@ -393,79 +377,4 @@ body {
     border-radius: 50px;
     font-size: 20px;
     color: #ffffff;
-}
-
-.bbutton-list {
-    margin-left: 650px;
-    margin-top: 20px; /* Space between the description and the button list */
-}
-
-.bbutton {
-    height: 40px;
-    width: 300px ;
-    display: block;
-    background-color: #00d9ff;
-    color: white;
-    padding: 15px;
-    text-align: center;
-    text-decoration: none;
-    font-size: 18px;
-    border-radius: 10px;
-    margin: 20px 0; /* Space between buttons */
-    transition: background-color 0.3s ease;
-}
-
-.bbutton:hover {
-    background-color: #00f619;
-}
-.dddescription2{
-    margin-left: 50px;
-    margin-right: 50px;
-    background-color:none;
-    padding: 20px;
-    margin-top: 20px;
-    border: 3px, solid #00ccff;
-    border-radius: 50px;
-    font-size: 20px;
-    color: green;
-/* Sidebar base styles */
-.sidebar {
-    position: fixed;
-    left: 0;
-    top: 0;
-    width: 250px;
-    height: 100%;
-    background-color: #333;
-    color: white;
-    overflow-y: auto;
-    transition: transform 0.3s ease;
-    z-index: 1000;
-}
-
-/* Sidebar hidden on mobile */
-.sidebar.closed {
-    transform: translateX(-100%);
-}
-
-/* Sidebar toggle button */
-#sidebarToggle {
-    position: absolute;
-    top: 10px;
-    right: -40px;
-    background-color: #333;
-    color: white;
-    border: none;
-    padding: 10px;
-    cursor: pointer;
-}
-
-/* Media query for smaller screens */
-@media (max-width: 768px) {
-    .sidebar {
-        transform: translateX(-100%);
-    }
-
-    .sidebar.open {
-        transform: translateX(0);
-    }
 }
