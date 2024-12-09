@@ -5,18 +5,6 @@ body {
     padding: 0;
     display: flex;
 }
-.sidebar {
-    position: fixed;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 220px; /* Further reduced width */
-    background-color: #333;
-    color: white;
-    overflow: hidden;
-    z-index: 2;
-    padding: 20px; /* Add padding for better spacing */
-}
 
 .sidebar nav {
     padding: 0;
