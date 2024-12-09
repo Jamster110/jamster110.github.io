@@ -5,22 +5,7 @@ body {
     padding: 0;
     display: flex;
 }
-@media (max-width: 768px) {
-    .sidebar {
-        display: none; /* Hide the sidebar on small screens */
-    }
-    .main-content {
-        padding: 10px;
-    }
-}
-.container {
-    width: 100%; /* Full width for smaller screens */
-}
-@media (max-width: 768px) {
-    .menu {
-        display: none;
-    }
-}
+
 .sidebar {
     position: fixed;
     top: 0;
@@ -194,7 +179,7 @@ body {
     margin: 0;
     padding: 0;
     display: flex;
-    background-image: url('Images/WEBSITE%20BACKGROUND.png'); /* Replace with your image path */
+    background-image: url(images/WEBSITE\ BACKGROUND.avif); /* Replace with your image path */
     background-size: cover; /* Ensures the image covers the entire background */
     background-position: center; /* Centers the background image */
     background-repeat: no-repeat; /* Prevents the image from repeating */
@@ -428,32 +413,4 @@ body {
     border-radius: 50px;
     font-size: 20px;
     color: green;
-/* Sidebar base styles */
-.sidebar {
-    position: fixed;
-    left: 0;
-    top: 0;
-    width: 250px;
-    height: 100%;
-    background-color: #333;
-    color: white;
-    overflow-y: auto;
-    transition: transform 0.3s ease;
-    z-index: 1000;
-}
-
-/* Sidebar hidden on mobile */
-.sidebar.closed {
-    transform: translateX(-100%);
-}
-
-/* Media query for smaller screens */
-@media (max-width: 768px) {
-    .sidebar {
-        transform: translateX(-100%);
-    }
-
-    .sidebar.open {
-        transform: translateX(0);
-    }
 }
