@@ -3,7 +3,7 @@ function toggleSidebar() {
     sidebar.classList.toggle('open');
 }
 
-const apiKey = 'AIzaSyDV5fcL8yC5mqIfL2M5EwgbADZ-yZjyQnA';  // Replace with your YouTube API key
+const apiKey = process.env.GOOGLE_API_KEY;
 const channelId = 'UC1lGZb83wad0NaKK_dfEVFA';     // Replace with your YouTube Channel ID
 const apiUrl = `https://www.googleapis.com/youtube/v3/search?key=${apiKey}&channelId=${channelId}&part=snippet&order=date&maxResults=3`;
 
