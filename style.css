@@ -5,6 +5,14 @@ body {
     padding: 0;
     display: flex;
 }
+@media (max-width: 768px) {
+    .sidebar {
+        display: none; /* Hide the sidebar on small screens */
+    }
+    .main-content {
+        padding: 10px;
+    }
+}
 
 
 
