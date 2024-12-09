@@ -179,7 +179,7 @@ body {
     margin: 0;
     padding: 0;
     display: flex;
-    background-image: url(Images/WEBSITE%20BACKGROUND.png); /* Replace with your image path */
+    background-image: url('Images/WEBSITE%20BACKGROUND.png');
     background-size: cover; /* Ensures the image covers the entire background */
     background-position: center; /* Centers the background image */
     background-repeat: no-repeat; /* Prevents the image from repeating */
