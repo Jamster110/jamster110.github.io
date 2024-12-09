@@ -171,14 +171,16 @@ footer {
     height: 50px; /* Keep the height or adjust as needed */
     width: 50px;  /* Ensure the width is the same as the height to maintain a square shape */
     border-radius: 50%; /* This makes the square image appear circular */
-    object-fit: cover; /* Ensures the image fits within the circle and doesn't get stretched */
+    object-fit: cover; /*Ensures the image fits within the circle and doesn't get stretched */
     margin-right: 5px; /* Space between the logo and the title */
 }
 body {
-    background-image: url('Images/WEBSITE%20BACKGROUND.png'); /* Path to your .avif image */
-    background-size: cover;
+    background-image: url('Images/WEBSITE%20BACKGROUND.png');
+    background-size: contain; /* Change from 'cover' to 'contain' */
+    background-repeat: no-repeat; /* Prevents repeating the image */
     background-position: center;
-    background-attachment: fixed; /* Optional */
+}
+
 }
 
 }
