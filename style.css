@@ -175,7 +175,7 @@ footer {
     margin-right: 5px; /* Space between the logo and the title */
 }
 body {
-    background-image: url('Images/WEBSITE%20BACKGROUND.avif');
+    background-image: url('Images/WEBSITE%20BACKGROUND.png');
     background-size: contain; /* Change from 'cover' to 'contain' */
     background-repeat: no-repeat; /* Prevents repeating the image */
     background-position: center;
