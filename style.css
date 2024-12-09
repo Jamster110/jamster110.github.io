@@ -1,0 +1,416 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: grey;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 220px; /* Further reduced width */
+    background-color: #333;
+    color: white;
+    overflow: hidden;
+    z-index: 2;
+    padding: 20px; /* Add padding for better spacing */
+}
+
+.sidebar nav {
+    padding: 0;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.sidebar li {
+    position: relative; /* Allows positioning of description */
+    margin: 10px 0;
+}
+
+.sidebar li a {
+    color: white;
+    text-decoration: none;
+    display: block;
+    padding: 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.sidebar li a:hover {
+    background-color: #575757; /* Slightly darker color on hover */
+}
+
+.sidebar li .description {
+    position: absolute;
+    left: 0;
+    top: 100%; /* Position description directly below the button */
+    background-color: #4CAF50;
+    color: white;
+    padding: 5px;
+    border-radius: 5px;
+    white-space: nowrap;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, top 0.3s ease;
+    max-width: 170px; /* Adjust width as needed */
+    font-size: 12px; /* Small font size */
+    z-index: 3; /* Ensure description is above other content */
+}
+
+.sidebar li:hover .description {
+    opacity: 1;
+    visibility: visible;
+    top: 120%; /* Adjust if needed to provide enough space */
+}
+
+.main-content {
+    margin-left: 250px; /* Adjusted for the further reduced sidebar width */
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+header {
+    background-color: #00ddff;
+    color: purple;
+    padding: 10px 50px;
+    text-align: left;
+    z-index: 1;
+    display: flex; /* Add this to align items horizontally */
+    align-items: center; /* Vertically center items */
+}
+
+.header-logo {
+    height: 50px; /* Adjust height as needed */
+    margin-right: 5px; /* Space between logo and title */
+}
+
+header h1 {
+    margin: 0;
+}
+
+main {
+    padding: 20px;
+    flex: 1;
+}
+
+footer {
+    background-color: #333;
+    color: grey;
+    text-align: center;
+    padding: 10px 0;
+    position: fixed;
+    width: calc(100% - 220px); /* Adjust width to account for further reduced sidebar */
+    bottom: 0;
+    left: 220px; /* Align footer with main content */
+}
+
+.box-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+.clickable-box {
+    display: inline-block;
+    background-color: #00d9ff;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    width: 270px;
+    height: 90px;
+    line-height: normal;
+    text-decoration: none;
+    font-size: 18px;
+    border-radius: 10px;
+    transition: background-color 0.3s ease;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    box-sizing: border-box;
+    margin-bottom: 20px;
+}
+
+.clickable-box:hover {
+    background-color: #00f619;
+}
+
+.video-title {
+    margin-top: 100px;
+    margin-bottom: 20px;
+}
+
+.video-title h2 {
+    margin: 0;
+    font-size: 24px;
+    text-align: center;
+    color: purple;
+}
+
+.video-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Three columns */
+    gap: 10px; /* Space between videos */
+}
+
+.video-item iframe {
+    width: 100%;
+    height: 315px; /* Adjust height as needed */
+    border: none;
+}
+.header-logo {
+    height: 50px; /* Keep the height or adjust as needed */
+    width: 50px;  /* Ensure the width is the same as the height to maintain a square shape */
+    border-radius: 50%; /* This makes the square image appear circular */
+    object-fit: cover; /* Ensures the image fits within the circle and doesn't get stretched */
+    margin-right: 5px; /* Space between the logo and the title */
+}
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    background-image: url(images/WEBSITE\ BACKGROUND.avif); /* Replace with your image path */
+    background-size: cover; /* Ensures the image covers the entire background */
+    background-position: center; /* Centers the background image */
+    background-repeat: no-repeat; /* Prevents the image from repeating */
+}
+/* Style for the content box that appears below the clicked button */
+.content-box {
+    display: none;
+    background-color: #f0f0f0;
+    padding: 10px;
+    margin-top: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    color: #333;
+    font-size: 14px;
+}
+
+.content-box.visible {
+    display: block;
+}
+.social-buttons {
+    gap: 50px;
+    display: flex;
+    flex-direction: left;
+    align-items: left;
+    margin-top: 50px;
+    margin-left: 30px;
+}
+
+.social-button {
+    display: flex;
+    align-items: center;
+    background-color: #00d9ff;
+    color: white;
+    padding: 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    margin: 10px 0;
+    width: 350px; /* Adjust width as needed */
+    box-sizing: border-box;
+    transition: background-color 0.3s ease;
+}
+
+.social-button:hover {
+    background-color: #00f619;
+}
+
+.social-logo {
+    height: 60px; /* Adjust size as needed */
+    width: 60px; /* Adjust size as needed */
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 10px;
+}
+.video-title {
+    margin-top: 100px; /* Adjust as needed */
+    text-align: center;
+}
+
+.video-container {
+    margin-top: 20px; /* Adjust the space between the title and the video grid */
+}
+
+.video-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Three columns */
+    gap: 10px; /* Space between videos */
+}
+
+.video-item iframe {
+    width: 100%;
+    height: 315px; /* Adjust height as needed */
+    border: none;
+}
+
+.angeldescription{
+    margin-left: 50px;
+    margin-right: 50px;
+    background-color:none;
+    padding: 20px;
+    margin-top: 100px;
+    border: 3px, solid;
+    border-radius: 5px;
+    font-size: 30px;
+}
+
+.angel-clickable-box{
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    background-color: #00d9ff;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    width: 400px;
+    height: auto;
+    line-height: normal;
+    text-decoration: none;
+    font-size: 18px;
+    border-radius: 10px;
+    transition: background-color 0.3s ease;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    box-sizing: border-box;
+    margin-bottom: 100px;
+}
+
+.donatedescription{
+    margin-left: 50px;
+    margin-right: 50px;
+    background-color:none;
+    padding: 20px;
+    margin-top: 50px;
+    border: 3px, solid #41df03;
+    border-radius: 50px;
+    font-size: 30px;
+    color: #ff0000;
+}
+.donatedescription2{
+    margin-top: 250px;
+    margin-left: 150px;
+    margin-right: 150px;
+    background-color:none;
+    padding: 20px;
+    border: 3px, solid #41df03;
+    border-radius: 50px;
+    font-size: 20px;
+    color: #000000;
+}
+.button-container {
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    gap: 20px; /* Space between buttons */
+    margin-top: 250px; /* Adjust spacing from other content as needed */
+}
+
+.button {
+    display: inline-block;
+    height: 30;
+    width: 300px;
+    background-color: #00d9ff;
+    color: white;
+    padding: 15px 30px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 18px;
+    border-radius: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.button:hover {
+    background-color: #00f619;
+
+}
+.button {
+    display: inline-block;
+    background-color: #00d9ff;
+    color: white;
+    padding: 15px 30px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 20px;
+    border-radius: 10px;
+    transition: background-color 0.3s ease;
+    position: relative;
+}
+
+.button-info {
+    display: block; /* Makes the text block level so it appears on a new line */
+    font-size: 17px; /* Adjust size as needed */
+    color: white; /* Adjust color as needed */
+    margin-top: 5px; /* Space between main text and additional info */
+    font-style: italic;
+}
+
+.button:hover {
+    background-color: #00f619;
+}
+.creatordescription2{
+    margin-left: 50px;
+    margin-right: 50px;
+    background-color:none;
+    padding: 20px;
+    margin-top: 600px;
+    border: 3px, solid #41df03;
+    border-radius: 50px;
+    font-size: 20px;
+    color: #ff0000;
+}
+.ddescription2{
+    margin-left: 50px;
+    margin-right: 50px;
+    background-color:none;
+    padding: 20px;
+    margin-top: 20px;
+    border: 3px, solid #00ccff;
+    border-radius: 50px;
+    font-size: 20px;
+    color: #ffffff;
+}
+
+.bbutton-list {
+    margin-left: 650px;
+    margin-top: 20px; /* Space between the description and the button list */
+}
+
+.bbutton {
+    height: 40px;
+    width: 300px ;
+    display: block;
+    background-color: #00d9ff;
+    color: white;
+    padding: 15px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 18px;
+    border-radius: 10px;
+    margin: 20px 0; /* Space between buttons */
+    transition: background-color 0.3s ease;
+}
+
+.bbutton:hover {
+    background-color: #00f619;
+}
+.dddescription2{
+    margin-left: 50px;
+    margin-right: 50px;
+    background-color:none;
+    padding: 20px;
+    margin-top: 20px;
+    border: 3px, solid #00ccff;
+    border-radius: 50px;
+    font-size: 20px;
+    color: green;
+}
