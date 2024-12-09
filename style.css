@@ -175,11 +175,17 @@ footer {
     margin-right: 5px; /* Space between the logo and the title */
 }
 body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
     background-image: url('Images/WEBSITE%20BACKGROUND.png');
-    background-size: contain; /* Change from 'cover' to 'contain' */
-    background-repeat: no-repeat; /* Prevents repeating the image */
-    background-position: center;
+    background-size: cover; /* Ensures the image covers the entire background */
+    background-position: center; /* Centers the image */
+    background-repeat: no-repeat; /* Prevents repetition */
+    background-attachment: fixed; /* Keeps the background fixed while scrolling */
 }
+
 
 }
 
