@@ -1,6 +1,6 @@
 html, body {
     height: 100%; /* Ensure the body takes up full height */
-    margin: 10;
+    margin: 0;
     padding: 0;
 }
 
@@ -78,7 +78,7 @@ body {
 }
 
 .main-content {
-    margin-left: 250px; /* Adjusted for the further reduced sidebar width */
+    margin-left: 200px; /* Adjusted for the further reduced sidebar width */
     flex: 1;
     display: flex;
     flex-direction: column;
