@@ -427,7 +427,7 @@ body {
     font-size: 20px;
     color: green;
 }
-/* Sidebar styling when it's visible */
+/* Sidebar default visible state */
 .sidebar {
     width: 250px;
     position: fixed;
@@ -435,16 +435,17 @@ body {
     top: 0;
     height: 100%;
     background-color: #333;
+    color: white;
     overflow-x: hidden;
-    transition: transform 0.3s ease;
+    transition: transform 0.3s ease; /* Smooth transition */
 }
 
-/* Sidebar styling when it's hidden */
+/* Sidebar hidden state */
 .sidebar.closed {
     transform: translateX(-100%);
 }
 
-/* Button styling (optional, adjust as needed) */
+/* Sidebar toggle button styling */
 .sidebar-toggle {
     background-color: #444;
     color: white;
@@ -454,7 +455,13 @@ body {
     cursor: pointer;
     position: absolute;
     top: 10px;
-    right: -50px; /* Adjust position to align outside the sidebar */
-    z-index: 1;
+    left: 250px; /* Adjust to be near the edge of the sidebar */
+    z-index: 1000;
 }
+
+/* Optional: Adjust button position when sidebar is hidden */
+.sidebar.closed .sidebar-toggle {
+    left: 0;
+}
+
 
