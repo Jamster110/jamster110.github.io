@@ -8,6 +8,7 @@
 </head>
 <body>
 <div class="sidebar" id="sidebar">
+    <button class="sidebar-toggle" id="toggle-button">&#9776;</button>
     <nav id="menu">
         <ul>
             <li>
@@ -34,25 +35,35 @@
     </nav>
 </div>
 
-    <div class="main-content">
-        <header>
-            <img src="Images/WEBSITE%20LOGO.png" alt="Logo" class="header-logo">
-            <h1>Jamster110</h1>
-        </header>
+<div class="main-content">
+    <header>
+        <img src="Images/WEBSITE%20LOGO.png" alt="Logo" class="header-logo">
+        <h1>Jamster110</h1>
+    </header>
 
-        <main>
-            <div class="box-container">
-                <a href="Socials.html" class="clickable-box">My Socials!</a>
-                <a href="Angelsmp.html" class="clickable-box">Join AngelSMP!</a>
-                <a href="Donate.html" class="clickable-box">Donate!</a>
-                <a href="Creators.html" class="clickable-box">Other Friendly Creators!</a>
-                <a href="Donators.html" class="clickable-box">Donators!</a>
-            </div>
-        <footer>
-            <p>&copy; Created Completely By Jamster110 & ChatGPT! </p>
-        </footer>
-    </div>
+    <main>
+        <div class="box-container">
+            <a href="Socials.html" class="clickable-box">My Socials!</a>
+            <a href="Angelsmp.html" class="clickable-box">Join AngelSMP!</a>
+            <a href="Donate.html" class="clickable-box">Donate!</a>
+            <a href="Creators.html" class="clickable-box">Other Friendly Creators!</a>
+            <a href="Donators.html" class="clickable-box">Donators!</a>
+        </div>
+    </main>
 
-    <script src="script.js"></script>
+    <footer>
+        <p>&copy; Created Completely By Jamster110 & ChatGPT! </p>
+    </footer>
+</div>
+
+<script>
+    const toggleButton = document.getElementById('toggle-button');
+    const sidebar = document.getElementById('sidebar');
+
+    toggleButton.addEventListener('click', () => {
+        sidebar.classList.toggle('closed');
+    });
+</script>
 </body>
 </html>
+
